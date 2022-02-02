@@ -1,0 +1,47 @@
+:root {
+    --grid-rows: 1;
+    --grid-cols: 1;
+}
+
+
+body {
+    border: 5px solid crimson;
+    text-align: center; /* This is only going to effect text elements */ 
+    /* height: 100vh;  /* This is to try and help with the position of the grid being so close to the top */
+
+    background-color: grey;
+}
+
+h1 {
+    align-self: center;
+    margin: 45px;
+    padding-bottom: 40px;
+}
+
+#reset {
+    margin: 15px;
+}
+
+#container {
+    /* Using the margin-left and margin-right with auto to have it automatically put the right amount of margin 
+    on both sides of the grid to center it */
+    display: grid;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+
+    margin-left: auto; 
+    margin-right: auto;
+    width: 500px;
+    height: 500px;
+
+    border: 5px solid black;
+} 
+
+
+
+.gridItem {
+    background-color: white;
+}
+
+
+
